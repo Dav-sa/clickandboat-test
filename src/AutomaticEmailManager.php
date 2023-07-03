@@ -13,6 +13,11 @@ class AutomaticEmailManager
         $this->data = $data;
         $this->isForPreview = $isForPreview;
     }
+    private function initializeLanguages()
+    {
+    $this->languages = Language::getInstance()->all();
+    }
+
 
     public function build()
     {
@@ -21,6 +26,7 @@ class AutomaticEmailManager
                 'AutomaticEmail not initialized (use `initialize` method or constructor to set the required information).'
             );
         }
+        
 
         $this->languages = Language::getInstance()->all();
         $fallbackLanguage = Language::getInstance()->filterCode($this->languages, 'en');
