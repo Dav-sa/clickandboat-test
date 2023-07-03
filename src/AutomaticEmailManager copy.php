@@ -114,6 +114,7 @@ class AutomaticEmailManager
             $this->replaceVar($prefix . '_builder', $this->data['product']->builder, $template->content);
         }
     
+
     }
     private function replaceSignature($template)
     {
@@ -132,10 +133,6 @@ class AutomaticEmailManager
     }
 
 
-
-
-
-        
     private function replaceVar(string $var, string $value, string &$content)
     {
         $content = str_replace('{%' . $var . '}', $value, $content);
