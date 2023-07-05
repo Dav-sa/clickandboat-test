@@ -13,10 +13,7 @@ class AutomaticEmailManager
         $this->data = $data;
         $this->isForPreview = $isForPreview;
     }
-    private function initializeLanguages()
-    {
-    $this->languages = Language::getInstance()->all();
-    }
+    
 
 
     public function build()

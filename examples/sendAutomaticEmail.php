@@ -2,7 +2,7 @@
 
 
 require_once __DIR__ . '/../src/Trait/SingletonTrait.php';
-require_once __DIR__ . '/../src/AutomaticEmailManager.php';
+require_once __DIR__ . '/../src/AutomaticEmailManagerRefactored.php';
 require_once __DIR__ . '/../src/Model/AutomaticEmail.php';
 require_once __DIR__ . '/../src/Model/AutomaticEmailTemplate.php';
 require_once __DIR__ . '/../src/Model/Language.php';

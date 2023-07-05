@@ -13,7 +13,8 @@ class AutomaticEmailManager
         $this->data = $data;
         $this->isForPreview = $isForPreview;
     }
- 
+
+    
 
     public function build()
     {
@@ -22,15 +23,12 @@ class AutomaticEmailManager
                 'AutomaticEmail not initialized (use `initialize` method or constructor to set the required information).'
             );
         }
+
         $this->initializeLanguages();
     
         $language = $this->getLanguage();
     
         $template = $this->getTemplate($language);
-    
-        if (!$this->isTemplateEnabled($template)) {
-            return false;
-        }
     
         $this->replaceToday($template);
     
@@ -49,7 +47,7 @@ class AutomaticEmailManager
     {
     $this->languages = Language::getInstance()->all();
     }
-
+ 
     private function getLanguage()
     {
     $fallbackLanguage = Language::getInstance()->filterCode($this->languages, 'en');
