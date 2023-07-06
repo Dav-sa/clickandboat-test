@@ -59,7 +59,7 @@ Commencons par analyser les traitements réalisés par la **fonction build** :
 - un bloc est chargé de la variable "introduction".
 - un autre de la variable "recipient" : il doit attribuer les propriétés nom, prénom, email et téléphone.
 - un troisième de la variable "product" : il assigne les variables title, city,model, builder.
-- un dernier s'occupe de construire le signature
+- un dernier s'occupe de construire la signature
 
 Ces 4 blocs doivent également être découpés en plus petites fonctions.
 
